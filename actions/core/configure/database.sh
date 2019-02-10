@@ -12,7 +12,7 @@ core_configure_database ()
     read -p "Enter the database port, or press ENTER for the default [$ARK_DB_PORT]: " inputPort
     read -p "Enter the database username, or press ENTER for the default [$ARK_DB_USERNAME]: " inputUsername
     read -p "Enter the database password, or press ENTER for the default [$ARK_DB_PASSWORD]: " inputPassword
-    read -p "Enter the database name, or press ENTER for the default [ark_${CORE_NETWORK}]: " inputDatabase
+    read -p "Enter the database name, or press ENTER for the default [xpx_${CORE_NETWORK}]: " inputDatabase
 
     if [[ ! -z "$inputHost" ]]; then
         sed -i -e "s/ARK_DB_HOST=$ARK_DB_HOST/ARK_DB_HOST=$inputHost/g" "$envFile"
@@ -33,7 +33,7 @@ core_configure_database ()
     if [[ ! -z "$inputDatabase" ]]; then
         sed -i -e "s/ARK_DB_DATABASE=$ARK_DB_DATABASE/ARK_DB_DATABASE=$inputDatabase/g" "$envFile"
     else
-        sed -i -e "s/ARK_DB_DATABASE=$ARK_DB_DATABASE/ARK_DB_DATABASE=ark_${CORE_NETWORK}/g" "$envFile"
+        sed -i -e "s/ARK_DB_DATABASE=$ARK_DB_DATABASE/ARK_DB_DATABASE=xpx_${CORE_NETWORK}/g" "$envFile"
     fi
 
     . "$envFile"
