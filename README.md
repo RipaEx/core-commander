@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/ArkEcosystem/core-commander
+git clone https://github.com/RipaEx/core-commander
 cd core-commander
 bash commander.sh
 ```
@@ -17,7 +17,7 @@ bash commander.sh
 ## Development
 
 ```sh
-git clone https://github.com/ArkEcosystem/core-commander
+git clone https://github.com/RipaEx/core-commander
 cd core-commander/.dev/{operating_system}
 vagrant up
 vagrant ssh
