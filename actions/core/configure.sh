@@ -172,39 +172,45 @@ __core_configure_environment ()
 
     grep -q '^ARK_P2P_HOST' "$envFile" 2>&1 || echo 'ARK_P2P_HOST=0.0.0.0' >> "$envFile" 2>&1
     grep -q '^ARK_API_HOST' "$envFile" 2>&1 || echo 'ARK_API_HOST=0.0.0.0' >> "$envFile" 2>&1
+    grep -q '^ARK_WEBHOOKS_HOST' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_HOST=0.0.0.0' >> "$envFile" 2>&1
+    grep -q '^ARK_GRAPHQL_HOST' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_HOST=0.0.0.0' >> "$envFile" 2>&1
+    grep -q '^ARK_JSON_RPC_HOST' "$envFile" 2>&1 || echo 'ARK_JSON_RPC_HOST=0.0.0.0' >> "$envFile" 2>&1
 
     if [[ "$1" = "xpx mainnet" ]]; then
         grep -q '^ARK_P2P_PORT' "$envFile" 2>&1 || echo 'ARK_P2P_PORT=5501' >> "$envFile" 2>&1
         grep -q '^ARK_API_PORT' "$envFile" 2>&1 || echo 'ARK_API_PORT=5502' >> "$envFile" 2>&1
+        grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=5503' >> "$envFile" 2>&1
+        grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=5504' >> "$envFile" 2>&1
     fi
 
     if [[ "$1" = "xpx devnet" ]]; then
         grep -q '^ARK_P2P_PORT' "$envFile" 2>&1 || echo 'ARK_P2P_PORT=7501' >> "$envFile" 2>&1
         grep -q '^ARK_API_PORT' "$envFile" 2>&1 || echo 'ARK_API_PORT=7502' >> "$envFile" 2>&1
+        grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=7503' >> "$envFile" 2>&1
+        grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=7504' >> "$envFile" 2>&1
     fi
 
     if [[ "$1" = "ark testnet" ]]; then
         grep -q '^ARK_P2P_PORT' "$envFile" 2>&1 || echo 'ARK_P2P_PORT=4000' >> "$envFile" 2>&1
         grep -q '^ARK_API_PORT' "$envFile" 2>&1 || echo 'ARK_API_PORT=4003' >> "$envFile" 2>&1
+        grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=4004' >> "$envFile" 2>&1
+        grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=4005' >> "$envFile" 2>&1
     fi
 
     if [[ "$1" = "ark mainnet" ]]; then
         grep -q '^ARK_P2P_PORT' "$envFile" 2>&1 || echo 'ARK_P2P_PORT=4001' >> "$envFile" 2>&1
         grep -q '^ARK_API_PORT' "$envFile" 2>&1 || echo 'ARK_API_PORT=4003' >> "$envFile" 2>&1
+        grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=4004' >> "$envFile" 2>&1
+        grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=4005' >> "$envFile" 2>&1
     fi
 
     if [[ "$1" = "ark devnet" ]]; then
         grep -q '^ARK_P2P_PORT' "$envFile" 2>&1 || echo 'ARK_P2P_PORT=4002' >> "$envFile" 2>&1
         grep -q '^ARK_API_PORT' "$envFile" 2>&1 || echo 'ARK_API_PORT=4003' >> "$envFile" 2>&1
+        grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=4004' >> "$envFile" 2>&1
+        grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=4005' >> "$envFile" 2>&1
     fi
 
-    grep -q '^ARK_WEBHOOKS_HOST' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_HOST=0.0.0.0' >> "$envFile" 2>&1
-    grep -q '^ARK_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'ARK_WEBHOOKS_PORT=4004' >> "$envFile" 2>&1
-
-    grep -q '^ARK_GRAPHQL_HOST' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_HOST=0.0.0.0' >> "$envFile" 2>&1
-    grep -q '^ARK_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'ARK_GRAPHQL_PORT=4005' >> "$envFile" 2>&1
-
-    grep -q '^ARK_JSON_RPC_HOST' "$envFile" 2>&1 || echo 'ARK_JSON_RPC_HOST=0.0.0.0' >> "$envFile" 2>&1
     grep -q '^ARK_JSON_RPC_PORT' "$envFile" 2>&1 || echo 'ARK_JSON_RPC_PORT=8080' >> "$envFile" 2>&1
 
     success "Created Environment configuration!"
