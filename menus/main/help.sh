@@ -4,28 +4,28 @@ menu_main_help ()
 {
     ascii
 
-    text_yellow "    Install Ark Core (I)"
-    text_white "    starts the Ark Core intall process."
+    text_yellow "    Install RipaEx Core (I)"
+    text_white "    starts the RipaEx Core intall process."
     echo
 
-    text_yellow "    Manage Ark Core (A)"
-    text_white "    opens the Ark Core options."
+    text_yellow "    Manage RipaEx Core (A)"
+    text_white "    opens the RipaEx Core options."
     echo
 
     text_yellow "    Manage Relay (R)"
-    text_white "    opens the Ark relay node process options."
+    text_white "    opens the RipaEx relay node process options."
     echo
 
     text_yellow "    Manage Forger (F)"
-    text_white "    opens the Ark forger node process options."
+    text_white "    opens the RipaEx forger node process options."
     echo
 
     text_yellow "    Manage Explorer (E)"
-    text_white "    opens the Ark Explorer options."
+    text_white "    opens the RipaEx Explorer options."
     echo
 
     text_yellow "    Manage Commander (C)"
-    text_white "    opens the Ark Commander options."
+    text_white "    opens the RipaEx Commander options."
     echo
 
     text_yellow "    Miscellaneous (M)"
@@ -33,7 +33,7 @@ menu_main_help ()
     echo
 
     text_yellow "    Show Logs (L)"
-    text_white "    opens the Ark Core logs so you can see what is going on with your node process in real-time."
+    text_white "    opens the RipaEx Core logs so you can see what is going on with your node process in real-time."
     echo
 
     text_yellow "    Show Process Monitor (P)"
@@ -45,7 +45,7 @@ menu_main_help ()
     echo
 
     text_yellow "    Exit (X)"
-    text_white "    exits Ark Commander"
+    text_white "    exits RipaEx Commander"
 
     divider
 
