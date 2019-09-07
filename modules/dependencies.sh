@@ -85,10 +85,15 @@ install_nodejs_dependencies ()
 
     if [[ ! -d "${commander_dir}/node_modules/dotenv" ]]; then
       sh -c "yarn add dotenv"
-    elif [[ ! -d "${commander_dir}/node_modules/env-paths" ]]; then
+    if [[ ! -d "${commander_dir}/node_modules/env-paths" ]]; then
       sh -c "yarn add env-paths"
     fi
-
+    if [[ ! -d "${commander_dir}/node_modules/expand-home-dir" ]]; then
+      sh -c "yarn add expand-home-dir"
+    fi
+    if [[ ! -d "${commander_dir}/node_modules/path" ]]; then
+      sh -c "yarn add path"
+    fi
     pm2_install
 }
 
