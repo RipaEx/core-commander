@@ -85,6 +85,7 @@ install_nodejs_dependencies ()
 
     if [[ ! -d "${commander_dir}/node_modules/dotenv" ]]; then
       sh -c "yarn add dotenv"
+    fi
     if [[ ! -d "${commander_dir}/node_modules/env-paths" ]]; then
       sh -c "yarn add env-paths"
     fi
