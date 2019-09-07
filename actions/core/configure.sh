@@ -167,12 +167,12 @@ __core_configure_environment ()
     grep -q '^CORE_DB_PORT' "${envFile}" 2>&1 || echo "CORE_DB_PORT=5432" >> "$envFile" 2>&1
     grep -q '^CORE_DB_USERNAME' "${envFile}" 2>&1 || echo "CORE_DB_USERNAME=${USER}" >> "$envFile" 2>&1
     grep -q '^CORE_DB_PASSWORD' "${envFile}" 2>&1 || echo "CORE_DB_PASSWORD=password" >> "$envFile" 2>&1
-    grep -q '^CORE_DB_DATABASE' "${envFile}" 2>&1 || echo "CORE_DB_DATABASE=ark_$1" >> "$envFile" 2>&1
+    grep -q '^CORE_DB_DATABASE' "${envFile}" 2>&1 || echo "CORE_DB_DATABASE=xpx_$1" >> "$envFile" 2>&1
 
     grep -q '^CORE_P2P_HOST' "$envFile" 2>&1 || echo 'CORE_P2P_HOST=0.0.0.0' >> "$envFile" 2>&1
 
     if [[ "$1" = "mainnet" ]]; then
-        grep -q '^CORE_P2P_PORT' "$envFile" 2>&1 || echo 'CORE_P2P_PORT=4001' >> "$envFile" 2>&1
+        grep -q '^CORE_P2P_PORT' "$envFile" 2>&1 || echo 'CORE_P2P_PORT=5501' >> "$envFile" 2>&1
     fi
 
     if [[ "$1" = "devnet" ]]; then
@@ -184,13 +184,13 @@ __core_configure_environment ()
     fi
 
     grep -q '^CORE_API_HOST' "$envFile" 2>&1 || echo 'CORE_API_HOST=0.0.0.0' >> "$envFile" 2>&1
-    grep -q '^CORE_API_PORT' "$envFile" 2>&1 || echo 'CORE_API_PORT=4003' >> "$envFile" 2>&1
+    grep -q '^CORE_API_PORT' "$envFile" 2>&1 || echo 'CORE_API_PORT=5502' >> "$envFile" 2>&1
 
     grep -q '^CORE_WEBHOOKS_HOST' "$envFile" 2>&1 || echo 'CORE_WEBHOOKS_HOST=0.0.0.0' >> "$envFile" 2>&1
-    grep -q '^CORE_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'CORE_WEBHOOKS_PORT=4004' >> "$envFile" 2>&1
+    grep -q '^CORE_WEBHOOKS_PORT' "$envFile" 2>&1 || echo 'CORE_WEBHOOKS_PORT=5503' >> "$envFile" 2>&1
 
     grep -q '^CORE_GRAPHQL_HOST' "$envFile" 2>&1 || echo 'CORE_GRAPHQL_HOST=0.0.0.0' >> "$envFile" 2>&1
-    grep -q '^CORE_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'CORE_GRAPHQL_PORT=4005' >> "$envFile" 2>&1
+    grep -q '^CORE_GRAPHQL_PORT' "$envFile" 2>&1 || echo 'CORE_GRAPHQL_PORT=5504' >> "$envFile" 2>&1
 
     grep -q '^CORE_JSON_RPC_HOST' "$envFile" 2>&1 || echo 'CORE_JSON_RPC_HOST=0.0.0.0' >> "$envFile" 2>&1
     grep -q '^CORE_JSON_RPC_PORT' "$envFile" 2>&1 || echo 'CORE_JSON_RPC_PORT=8080' >> "$envFile" 2>&1
