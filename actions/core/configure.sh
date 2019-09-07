@@ -97,7 +97,7 @@ __core_configure_network ()
         case "$opt" in
             "mainnet")
                 __core_configure_commander "mainnet"
-                __core_configure_branch "master"
+                __core_configure_branch "2.1.2"
                 __core_configure_core "mainnet"
                 __core_configure_environment "mainnet"
                 break
