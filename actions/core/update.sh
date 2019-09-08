@@ -15,11 +15,11 @@ core_update ()
     if [[ "$remote_version" == "$local_version" ]]; then
         STATUS_CORE_UPDATE="No"
 
-        info "You already have the latest supported Ark Core version."
+        info "You already have the latest supported RipaEx Core version."
     else
         STATUS_CORE_UPDATE="Yes"
 
-        read -p "An update is available for Ark Core, do you want to install it? [Y/n] : " choice
+        read -p "An update is available for RipaEx Core, do you want to install it? [Y/n] : " choice
 
         if [[ -z "$choice" || "$choice" =~ ^(yes|y|Y) ]]; then
             relay_status
@@ -40,14 +40,17 @@ core_update ()
             git reset --hard | tee -a "$commander_log"
             git checkout "$CORE_BRANCH" | tee -a "$commander_log"
             git pull | tee -a "$commander_log"
-            lerna clean --yes
-            lerna bootstrap
+            yarn setup
 
             # Make sure the git commit hash is not modified by a local yarn.lock
             git reset --hard | tee -a "$commander_log"
 
-            check_for_modifications "packages/core/lib/config/${CORE_NETWORK}/plugins.js" "${CORE_CONFIG}/plugins.js"
-            check_for_modifications "packages/crypto/lib/networks/${CORE_TOKEN}/${CORE_NETWORK}.json" "${CORE_CONFIG}/network.json"
+            check_for_modifications "packages/core/src/config/${CORE_NETWORK}/plugins.js" "${CORE_PATH_CONFIG}/plugins.js"
+
+            # Make sure we have the latest peers lists and sources
+            rm -f "${CORE_PATH_CONFIG}/peers.json"
+            rm -f "${CORE_PATH_CACHE}/${CORE_NETWORK}/peers.json"
+            cp -f "${CORE_DIR}/packages/core/src/config/${CORE_NETWORK}/peers.json" "${CORE_PATH_CONFIG}/peers.json"
 
             if [[ "$relay_on" = "On" ]]; then
                 relay_start

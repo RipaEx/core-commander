@@ -5,9 +5,9 @@ core_install ()
     ascii
 
     if [[ -d "$CORE_DIR" ]]; then
-        error "We found an existing Ark Core installation! Please use the uninstall option first."
+        error "We found an existing RipaEx Core installation! Please use the uninstall option first."
     else
-        heading "Installing Ark Core..."
+        heading "Installing RipaEx Core..."
 
         # Prepare
         sudo mkdir "$CORE_DIR" >> "$commander_log" 2>&1
@@ -24,7 +24,7 @@ core_install ()
 
         ascii
 
-        success "Installed Ark Core!"
+        success "Installed RipaEx Core!"
 
         core_version
     fi

@@ -1,10 +1,12 @@
-# Ark Core Commander
+# RipaEx Core Commander
+
+**:warning: Deprecated from the 11.03.2019 onwards - RipaEx Core comes with a built-in CLI since v2.2.0 and provides an installation script :warning:**
 
 <p align="center">
     <img src="https://github.com/ArkEcosystem/core-commander/blob/master/banner.png" />
 </p>
 
-> A shell script to easily setup, configure and maintain [Ark Core](https://github.com/ArkEcosystem/core).
+> A shell script to easily setup, configure and maintain [RipaEx Core](https://github.com/ArkEcosystem/core).
 
 ## Installation
 
