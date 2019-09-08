@@ -48,7 +48,7 @@ followed by `npm link dotenv` inside the commander directory.
 - Ubuntu 18.04 ntpd & timesyncd service collision
 - Add `git fetch` to properly check for remote diffs
 - `pm2 status` name collisions
-- Directory removal issue during Ark Core uninstall
+- Directory removal issue during RipaEx Core uninstall
 
 ### Changed
 - Improved logging & installations by using tee

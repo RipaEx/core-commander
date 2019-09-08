@@ -9,7 +9,7 @@ menu_manage_commander_help ()
     echo
 
     text_yellow "    Configure Core Directory (A)"
-    text_white "    lets you configure the directory core is installed into when you select Install Ark Core (you can change this before you start the core installation)."
+    text_white "    lets you configure the directory core is installed into when you select Install RipaEx Core (you can change this before you start the core installation)."
     echo
 
     text_yellow "    Configure Core Data Directory (D)"

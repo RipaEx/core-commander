@@ -4,7 +4,7 @@ core_uninstall ()
 {
     ascii
 
-    heading "Uninstalling Ark Core..."
+    heading "Uninstalling RipaEx Core..."
 
     forger_delete
 
@@ -41,7 +41,7 @@ core_uninstall ()
     sudo rm -rf "$CORE_PATH_TEMP"
     success "Deleted Temp!"
 
-    success "Uninstalled Ark Core!"
+    success "Uninstalled RipaEx Core!"
 
     core_version
 }
