@@ -60,7 +60,7 @@ commander_configure_core_directory ()
 
 commander_configure_data_directory ()
 {
-    info "Current: $CORE_DATA"
+    info "Current: $CORE_PATH_DATA"
     read -p "Please enter the core data directory you would like to use: " choice
 
     if [[ -z "$choice" ]]; then
@@ -69,12 +69,12 @@ commander_configure_data_directory ()
         return
     fi
 
-    __commander_configure "$CORE_REPO" "$CORE_DIR" "$choice" "$CORE_CONFIG" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
+    __commander_configure "$CORE_REPO" "$CORE_DIR" "$choice" "$CORE_PATH_CONFIG" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
 }
 
 commander_configure_config_directory ()
 {
-    info "Current: $CORE_CONFIG"
+    info "Current: $CORE_PATH_CONFIG"
     read -p "Please enter the core config directory you would like to use: " choice
 
     if [[ -z "$choice" ]]; then
@@ -83,7 +83,7 @@ commander_configure_config_directory ()
         return
     fi
 
-    __commander_configure "$CORE_REPO" "$CORE_DIR" "$CORE_DATA" "$choice" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
+    __commander_configure "$CORE_REPO" "$CORE_DIR" "$CORE_PATH_DATA" "$choice" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
 }
 
 commander_configure_token ()
