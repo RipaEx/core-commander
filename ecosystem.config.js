@@ -15,14 +15,14 @@ module.exports = {
   apps : [{
     name: 'ark-core-relay',
     script: `${process.env.CORE_DIR}/packages/core/dist/index.js`,
-    args: `relay --network ${process.env.CORE_NETWORK}`,
+    args: `relay --network ${process.env.CORE_NETWORK} --token ${process.env.CORE_TOKEN} --config ${process.env.CORE_PATH_CONFIG}`,
     max_restarts: 5,
     min_uptime: '5m',
     kill_timeout: 30000
   }, {
     name: 'ark-core-forger',
     script: `${process.env.CORE_DIR}/packages/core/dist/index.js`,
-    args: `forger --network ${process.env.CORE_NETWORK}`,
+    args: `forger --network ${process.env.CORE_NETWORK} --token ${process.env.CORE_TOKEN} --config ${process.env.CORE_PATH_CONFIG}`,
     max_restarts: 5,
     min_uptime: '5m',
     kill_timeout: 30000,
